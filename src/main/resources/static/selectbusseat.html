@@ -1,0 +1,104 @@
+<html>
+<head>
+<style>
+    body{
+        background-color: rgb(140, 204, 197);
+    }
+    .chkbox{
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    width: 300px;
+    height: 490px;
+    background-color: white;
+    border-radius: 3px;
+    border-style:solid;
+    }
+    h1{
+        text-align: center;
+        padding-top: 10px;
+        font-family:monospace;
+        font-size: 30px;
+    }
+    form{
+        width: 250px;
+        margin-left: 15px;
+    }
+    label.sno{
+        margin-left: 18%;
+        font-family: Consolas;
+    }
+    label.srow{
+        position: relative;
+        margin-left: 5%;
+        margin-top: 10%;
+        bottom: 15px;
+        font-family: Consolas;
+        
+    }
+    input[type="checkbox"]{
+        position: relative;
+        height: 40px;
+        width: 33px;
+        margin-left: 6%;
+        margin-top: 5%;
+        padding-top: 3%;    
+    }
+    input[type="submit"]{
+        width: 80%;
+        height: 30px;
+        margin-top: 7px;
+        margin-left: 38px;
+        background-color: rgb(99, 136, 136);
+        color: white;
+        font-family: Consolas;
+        font-weight: bold;  
+        border: 1.5px solid grey;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>  
+    <div class="chkbox">
+        <h1>SELECT SEATS</h1>
+        <!-- <form action="paymentpage.jsp"> -->
+        <form action="/selectSeat" method="post">
+            <label class="sno">1</label>
+            <label class="sno">2</label>
+            <label class="sno">3</label>
+            <label class="sno">4</label>
+            <label class="srow">A</label>
+            <input type="checkbox" name="seats" value="A1">
+            <input type="checkbox" name="seats" value="A2">
+            <input type="checkbox" name="seats" value="A3">
+            <input type="checkbox" name="seats" value="A4">
+            <label class="srow">B</label>
+            <input type="checkbox" name="seats" value="B1">
+            <input type="checkbox" name="seats" value="B2">
+            <input type="checkbox" name="seats" value="B3">
+            <input type="checkbox" name="seats" value="B4">
+            <label class="srow">C</label>
+            <input type="checkbox" name="seats" value="C1">
+            <input type="checkbox" name="seats" value="C2">
+            <input type="checkbox" name="seats" value="C3">
+            <input type="checkbox" name="seats" value="C4">
+            <label class="srow">D</label>
+            <input type="checkbox" name="seats" value="D1">
+            <input type="checkbox" name="seats" value="D2">
+            <input type="checkbox" name="seats" value="D3">
+            <input type="checkbox" name="seats" value="D4">
+            <label class="srow">E</label>
+            <input type="checkbox" name="seats" value="E1">
+            <input type="checkbox" name="seats" value="E2">
+            <input type="checkbox" name="seats" value="E3">
+            <input type="checkbox" name="seats" value="E4">
+            <label class="srow">F</label>
+            <input type="checkbox" name="seats" value="F1">
+            <input type="checkbox" name="seats" value="F2">
+            <input type="checkbox" name="seats" value="F3">
+            <input type="checkbox" name="seats" value="F4">
+            <input type="submit" value="BOOK">
+        </form>
+    </div>
+</body>
+</html>

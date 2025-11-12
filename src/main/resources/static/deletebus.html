@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        background-color: rgb(140, 204, 197);
+    }
+    .delbus{
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        width: 300px;
+        height: 200px;
+        background-color: white;
+        border-radius: 3px;
+        border-style:solid;
+    }
+    h1{
+        text-align: center;
+        padding-top: 10px;
+        font-family:monospace;
+        font-size: 25px;
+    }
+    form{
+        width: 200px;
+        margin-left: 15px;
+    }
+    form label{
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: Consolas;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    form input{
+        width: 130%;
+        height: 25px;
+        padding: 3px;
+        border: 1.5px solid grey;
+        border-radius: 5px;
+    }
+    input[type="submit"]{
+        width: 130%;
+        height: 30px;
+        margin-top: 15px;
+        background-color: rgb(99, 136, 136);
+        color: white;
+        font-family: Consolas;
+        font-weight: bold;
+    }
+</style>
+<script>
+function checkBusno(ipbusno)
+{
+	const busno_regexp="^[0-9]+$";
+	if(!ipbusno.value.match(busno_regexp))
+	{
+		alert("Bus number should contain only digits!");
+		ipbusno.value=" ";
+	}
+}
+</script>
+</head>
+<body>
+    <div class="delbus">
+        <h1>DELETE BUS DETAILS</h1>
+        <form action="/deleteBus" method="get" name="deletebusnoform">
+            <label>Enter Bus No: </label>
+            <input type="text" name="busno" required="required" onmouseout="checkBusno(document.deletebusnoform.busno)">
+            <input type="submit" value="DELETE" >    
+        </form>
+    </div>
+</body>
+</html>

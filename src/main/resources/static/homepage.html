@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        background-color: rgb(140, 204, 197);
+    }
+    .roles{
+        position: absolute;
+        top: 15%;
+        left: 35%;
+        width: 300px;
+        height: 350px;
+        background-color: white;
+        border-radius: 3px;
+        border-style:solid;
+    }
+    h1{
+        text-align: center;
+        padding-top: 10px;
+        font-family:monospace;
+        font-size: 30px;
+    }
+    button{
+        display: flex;
+        width: 70%;
+        height: 10%;
+        margin-top: 10px;
+        margin-left: 45px;
+        padding-left: 60px;
+        background-color: rgb(99, 136, 136);
+        color: white;
+        font-family: Consolas;
+        font-weight: bold;
+        border: 1.5px solid grey;
+        border-radius: 5px;
+    }   
+</style>
+</head>
+<body>
+    <div class="roles">
+        <h1>Welcome</h1>
+        <button onclick="window.location.href='bookbus.html';">BOOK BUS</button>
+        <button onclick="window.location.href='/viewBookings';">VIEW BOOKING</button>
+        <button onclick="window.location.href='cancelbusbooking.html';">CANCEL BOOKING</button>
+        <button onclick="window.location.href='updatepersonaldetails.html';">UPDATE DETAILS</button>
+        <button onclick="window.location.href='/viewPayment';">PAYMENT DETAILS</button>
+        <button onclick="window.location.href='/logout';">LOG-OUT</button>
+    </div>
+</body>
+</html>

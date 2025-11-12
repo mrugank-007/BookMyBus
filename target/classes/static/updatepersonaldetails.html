@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+body{
+    background-color: rgb(140, 204, 197);
+}
+.signup_box{
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    width: 300px;
+    height: 480px;
+    background-color: white;
+    border-radius: 3px;
+    border-style:solid;
+}
+h1{
+    text-align: center;
+    padding-top: 10px;
+    font-family:monospace;
+    font-size: 30px;
+}
+form{
+    width: 300px;
+    margin-left: 13px;
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: Consolas;
+    font-size: 15px;
+    font-weight: bold;
+}
+form input{
+    width: 90%;
+    height: 25px;
+    padding: 3px;
+    border: 1.5px solid grey;
+    border-radius: 5px;
+}
+input[type="submit"]{
+    width: 93%;
+    height: 30px;
+    margin-top: 20px;
+    background-color: rgb(99, 136, 136);
+    color: white;
+    font-family: Consolas;
+    font-weight: bold;
+}
+p{
+    text-align: center;
+    padding: 10px;
+    font-family: Consolas;
+    font-size: 15px;
+    font-weight: bold;
+}
+</style>
+<script>
+function checkFLname(ipflname)
+{
+	const fname_regexp="^[A-Za-z]+$";
+	if(!ipflname.value.match(fname_regexp))
+	{
+		alert("Name should contain only characters!");
+		ipflname.value=" ";
+	}
+}
+function checkContactNo(ipcontact)
+{
+	const contact_regexp="^[6-9]{1}[0-9]{9}$";
+	if(!ipcontact.value.match(contact_regexp))
+	{
+		alert("Contact Number should contain only digits!");
+		ipcontact.value=" ";
+	}
+}
+function checkEmail(ipemail)
+{
+	const email_regexp=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(!ipemail.value.match(email_regexp))
+	{
+		alert("Enter email in valid format!");
+		ipemail.value=" ";
+	}
+}
+</script>
+</head>
+<body>
+    <div class="signup_box">
+        <h1>UPDATE DETAILS</h1>
+        <form action="/updateCust" method="post" name="upddetailsform">
+            <label>First Name:</label>
+            <input type="text" name="fname" required>
+            <label>Last Name:</label>
+            <input type="text" name="lname" required onclick="checkFLname(document.upddetailsform.fname)">
+            <label>Mobile No: </label>
+            <input type="text" name="contactno" required onclick="checkFLname(document.upddetailsform.lname)">
+            <label>E-Mail:</label>
+            <input type="text" name="email" required onclick="checkContactNo(document.upddetailsform.contactno)">
+            <label>Password:</label>
+            <input type="password" name="password" required onclick="checkEmail(document.upddetailsform.email)">
+            <input type="submit" value="UPDATE">
+        </form>
+        <!-- <p>Already registered? <a href="LogIn.html">Login</a></p> -->
+    </div>
+</body>
+</html>

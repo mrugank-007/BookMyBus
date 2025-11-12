@@ -1,0 +1,74 @@
+@charset "ISO-8859-1";
+body{
+    background-color: rgb(140, 204, 197);
+}
+.topic{
+	font-family: Consolas;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 3%;
+}
+.login_box{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 300px;
+    height: 320px;
+    background-color: white;
+    border-radius: 3px;
+    border-style:solid;
+}
+h1{
+    text-align: center;
+    padding-top: 10px;
+    font-family:monospace;
+    font-size: 30px;
+}
+form{
+    width: 200px;
+    margin-left: 15px;
+}
+form label{
+    display: flex;
+    margin-top: 15px;
+    font-family: Consolas;
+    font-size: 15px;
+    font-weight: bold;
+}
+form input{
+    width: 130%;
+    height: 25px;
+    padding: 3px;
+    border: 1.5px solid grey;
+    border-radius: 5px;
+}
+input[type="submit"]{
+    width: 130%;
+    height: 30px;
+    margin-top: 20px;
+    background-color: rgb(99, 136, 136);
+    color: white;
+    font-family: Consolas;
+    font-weight: bold;
+}
+p{
+    text-align: center;
+    padding: 5px;
+    font-family: Consolas;
+    font-size: 15px;
+    font-weight: bold;
+}
+button{
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: rgb(99, 136, 136);
+    color: white;
+    font-family: Consolas;
+    font-weight: bold;
+    border: 1.5px solid grey;
+    border-radius: 5px;
+}

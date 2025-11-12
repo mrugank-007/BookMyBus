@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        background-color: rgb(140, 204, 197);
+    }
+    .cancelbus{
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        width: 300px;
+        height: 200px;
+        background-color: white;
+        border-radius: 3px;
+        border-style:solid;
+    }
+    h1{
+        text-align: center;
+        padding-top: 10px;
+        font-family:monospace;
+        font-size: 23px;
+    }
+    form{
+        width: 200px;
+        margin-left: 15px;
+    }
+    form label{
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: Consolas;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    form input{
+        width: 130%;
+        height: 25px;
+        padding: 3px;
+        border: 1.5px solid grey;
+        border-radius: 5px;
+    }
+    input[type="submit"]{
+        width: 130%;
+        height: 30px;
+        margin-top: 15px;
+        background-color: rgb(99, 136, 136);
+        color: white;
+        font-family: Consolas;
+        font-weight: bold;
+    }
+</style>
+<script>
+function checkBooking(ipbid)
+{
+	const bid_regexp="^[0-9]+$";
+	if(!ipbid.value.match(bid_regexp))
+	{
+		alert("Booking ID should contain only digits!");
+		ipbid.value=" ";
+	}
+}
+</script>
+</head>
+<body>
+    <div class="cancelbus">
+        <h1>CANCEL BUS BOOKING</h1>
+        <form action="/cancelBus" method="get" name="cancelbusform">
+            <label>Enter Booking ID: </label>
+            <input type="text" name="bookingid" required onmouseout="checkBooking(document.cancelbusform.bookingid)">
+            <input type="submit" value="DELETE">    
+        </form>
+    </div>
+</body>
+</html>
